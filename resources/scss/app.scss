@@ -1,1 +1,82 @@
 @import "~bootstrap/scss/bootstrap";
+
+.header-link {
+    background-color: #0282f9;
+
+    .link {
+        text-align: end;
+        line-height: 17px;
+        a {
+            color: white;
+            font-size: 8px;
+            font-weight: bold;
+            padding: 0 1rem;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.container {
+    width: 65%;
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        width: 8%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .links {
+        .active {
+            color: #0282f9;
+        }
+        width: 82%;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            gap: 1rem;
+
+            li {
+                font-weight: bold;
+                font-size: 13px;
+            }
+
+            a {
+                color: #555;
+            }
+        }
+    }
+
+    .search {
+        width: 10%;
+
+        input {
+            width: 100%;
+            text-align: end;
+            border: none;
+            border-bottom: 2px solid #0282f9;
+            padding: 5px;
+            font-size: 13px;
+        }
+    }
+}
