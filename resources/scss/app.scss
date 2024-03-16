@@ -115,9 +115,6 @@
 .comics {
     background-color: #1c1c1c;
     min-height: 200px;
-    .container {
-        padding: 3rem 0;
-    }
 
     .card {
         background-color: transparent;
@@ -128,8 +125,17 @@
             aspect-ratio: 1;
         }
         p {
-            font-size: 13px;
-            padding-top: 5px;
+            font-size: 12px;
+            padding-top: 15px;
+        }
+    }
+    .btn {
+        border-radius: 0;
+        padding: 5px 40px;
+        font-size: 11px;
+        font-weight: bold;
+        &:hover {
+            background-color: transparent;
         }
     }
 }
