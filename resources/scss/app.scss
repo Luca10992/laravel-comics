@@ -2,6 +2,7 @@
 
 .header-link {
     background-color: #0282f9;
+    height: 20px;
 
     .link {
         text-align: end;
@@ -30,6 +31,11 @@
     }
 }
 
+.header-navbar {
+    height: 75px;
+    margin-bottom: 18px;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -46,6 +52,7 @@
     .links {
         .active {
             color: #0282f9;
+            border-bottom: 4px solid #0282f9;
         }
         width: 82%;
         ul {
@@ -54,7 +61,7 @@
             align-items: center;
             padding: 0;
             margin: 0;
-            gap: 1rem;
+            gap: 1.5rem;
 
             li {
                 font-weight: bold;
@@ -63,6 +70,7 @@
 
             a {
                 color: #555;
+                padding-bottom: 34px;
             }
         }
     }
@@ -77,6 +85,92 @@
             border-bottom: 2px solid #0282f9;
             padding: 5px;
             font-size: 13px;
+        }
+    }
+}
+
+.jumbotron {
+    height: 320px;
+    width: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+    .container {
+        position: relative;
+        div {
+            position: absolute;
+            padding: 0.3rem 0.8rem;
+            font-size: 23px;
+            font-weight: bold;
+            background-color: #0282f9;
+            color: white;
+            top: -25px;
+        }
+    }
+}
+
+.footer-bg {
+    height: 320px;
+    width: 100%;
+    background-image: url(../assets/images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    .footer-info {
+        padding: 2rem 0;
+        width: 50%;
+        ul {
+            padding: 0;
+        }
+        h5 {
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        p {
+            color: #888;
+            font-size: 10px;
+            margin: 0;
+            &:hover {
+                opacity: 0.8;
+                cursor: pointer;
+            }
+        }
+    }
+    .footer-logo {
+        width: 50%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+    }
+}
+
+.footer-social {
+    height: 75px;
+    background-color: #303030;
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn {
+            color: white;
+            border-radius: 0;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .follow {
+            color: #0282f9;
+            font-weight: bold;
+        }
+        a:hover {
+            opacity: 0.8;
         }
     }
 }
