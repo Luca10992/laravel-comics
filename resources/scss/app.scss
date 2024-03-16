@@ -112,6 +112,28 @@
     }
 }
 
+.comics {
+    background-color: #1c1c1c;
+    min-height: 200px;
+    .container {
+        padding: 3rem 0;
+    }
+
+    .card {
+        background-color: transparent;
+        color: white;
+        border: none;
+        img {
+            width: 100%;
+            aspect-ratio: 1;
+        }
+        p {
+            font-size: 13px;
+            padding-top: 5px;
+        }
+    }
+}
+
 .footer-bg {
     height: 320px;
     width: 100%;

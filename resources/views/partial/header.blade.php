@@ -17,8 +17,8 @@
                     <ul>
                         <li><a @if(Route::currentRouteName()=='characters' ) class="active" @endif
                                 href="{{ route('characters') }}">CHARACTERS</a></li>
-                        <li><a @if(Route::currentRouteName()=='comics' ) class="active" @endif
-                                href="{{ route('comics') }}">COMICS</a></li>
+                        <li><a @if(Route::currentRouteName()=='comicsPage' ) class="active" @endif
+                                href="{{ route('comicsPage') }}">COMICS</a></li>
                         <li><a @if(Route::currentRouteName()=='movies' ) class="active" @endif
                                 href="{{ route('movies') }}">MOVIES</a></li>
                         <li><a @if(Route::currentRouteName()=='tv' ) class="active" @endif
