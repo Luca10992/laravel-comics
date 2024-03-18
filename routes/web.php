@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,53 +16,26 @@ use Illuminate\Support\Facades\Route;
 
 
 // ROUTE NAVBAR
-Route::get('/characters', function () {
-  return view('layout.app');
-})->name('characters');
+Route::get('/characters', [PageController::class, 'index'])->name('characters');
 
-Route::get('/', function () {
-  $comics = config('comics');
-  return view('comicsPage', compact('comics'));
-})->name('comicsPage');
+Route::get('/', [PageController::class, 'library'])->name('comicsPage');
 
-Route::get('/movies', function () {
-  return view('layout.app');
-})->name('movies');
+Route::get('/movies', [PageController::class, 'index'])->name('movies');
 
-Route::get('/tv', function () {
-  return view('layout.app');
-})->name('tv');
+Route::get('/tv', [PageController::class, 'index'])->name('tv');
 
-Route::get('/games', function () {
-  return view('layout.app');
-})->name('games');
+Route::get('/games', [PageController::class, 'index'])->name('games');
 
-Route::get('/collectibles', function () {
-  return view('layout.app');
-})->name('collectibles');
+Route::get('/collectibles', [PageController::class, 'index'])->name('collectibles');
 
-Route::get('/videos', function () {
-  return view('layout.app');
-})->name('videos');
+Route::get('/videos', [PageController::class, 'index'])->name('videos');
 
-Route::get('/fans', function () {
-  return view('layout.app');
-})->name('fans');
+Route::get('/fans', [PageController::class, 'index'])->name('fans');
 
-Route::get('/news', function () {
-  return view('layout.app');
-})->name('news');
+Route::get('/news', [PageController::class, 'index'])->name('news');
 
-Route::get('/shop', function () {
-  return view('layout.app');
-})->name('shop');
+Route::get('/shop', [PageController::class, 'index'])->name('shop');
 
 // ROUTE COMICS
 
-Route::get('/comicsDesc/{index}', function ($index) {
-  $comics = config('comics');
-  if (!array_key_exists($index, $comics)) {
-    abort(404);
-  }
-  return view('comicsDesc', compact('comics', 'index'));
-})->name('comicsDesc');
+Route::get('/comicsDesc/{index}', [PageController::class, 'desc'])->name('comicsDesc');
