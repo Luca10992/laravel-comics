@@ -98,16 +98,78 @@
         object-fit: cover;
         object-position: top;
     }
-    .container {
-        position: relative;
-        div {
+}
+
+.container.relative {
+    position: relative;
+    div {
+        position: absolute;
+        padding: 0.3rem 0.8rem;
+        font-size: 23px;
+        font-weight: bold;
+        background-color: #0282f9;
+        color: white;
+        top: -25px;
+    }
+}
+
+.blue-bar {
+    background-color: #0282f9;
+    height: 60px;
+    position: relative;
+    .container.thumb {
+        width: 55%;
+        .thumb {
+            width: 20%;
             position: absolute;
-            padding: 0.3rem 0.8rem;
-            font-size: 23px;
+            position: relative;
+            top: -200px;
+            img {
+                width: 100%;
+                aspect-ratio: 2/3;
+            }
+            .top {
+                position: absolute;
+                background-color: #6cb8ff;
+                color: white;
+                font-size: 10px;
+                padding: 0 5px;
+                top: 0;
+            }
+            .bottom {
+                width: 100%;
+                background-color: #6cb8ff;
+                color: white;
+                font-size: 10px;
+                position: absolute;
+                text-align: center;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.container.desc {
+    width: 55%;
+    .desc-box {
+        width: 70%;
+        padding-top: 13px;
+        .title-comic {
+            color: #093257;
             font-weight: bold;
-            background-color: #0282f9;
-            color: white;
-            top: -25px;
+            font-size: 25px;
+        }
+    }
+    .adv-box {
+        width: 30%;
+        p {
+            margin: 0;
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+        }
+        img {
+            width: 100%;
         }
     }
 }
@@ -118,15 +180,21 @@
 
     .card {
         background-color: transparent;
-        color: white;
         border: none;
-        img {
-            width: 100%;
-            aspect-ratio: 1;
-        }
-        p {
-            font-size: 12px;
-            padding-top: 15px;
+        a {
+            color: white;
+
+            img {
+                width: 100%;
+                aspect-ratio: 1;
+            }
+            p {
+                font-size: 12px;
+                padding-top: 15px;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
         }
     }
     .btn {

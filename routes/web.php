@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// ROUTE NAVBAR
 Route::get('/characters', function () {
   return view('layout.app');
 })->name('characters');
@@ -53,3 +55,13 @@ Route::get('/news', function () {
 Route::get('/shop', function () {
   return view('layout.app');
 })->name('shop');
+
+// ROUTE COMICS
+
+Route::get('/comicsDesc/{index}', function ($index) {
+  $comics = config('comics');
+  if (!array_key_exists($index, $comics)) {
+    abort(404);
+  }
+  return view('comicsDesc', compact('comics', 'index'));
+})->name('comicsDesc');
