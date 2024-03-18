@@ -54,6 +54,9 @@
             color: #0282f9;
             border-bottom: 4px solid #0282f9;
         }
+        span {
+            color: #0282f9;
+        }
         width: 82%;
         ul {
             display: flex;
@@ -154,10 +157,36 @@
     .desc-box {
         width: 70%;
         padding-top: 13px;
+        .price-box {
+            background-color: #55ba59;
+            border-bottom: 1px solid #777;
+            font-size: 13px;
+            font-weight: bold;
+            div {
+                color: rgba(255, 255, 255, 0.7);
+                span {
+                    color: white;
+                }
+            }
+            .price {
+                width: 70%;
+            }
+            .check {
+                width: 30%;
+                border-left: 1px solid #777;
+                span {
+                    font-size: 8px;
+                }
+            }
+        }
         .title-comic {
             color: #093257;
             font-weight: bold;
             font-size: 25px;
+        }
+        .description {
+            font-size: 13px;
+            color: #555;
         }
     }
     .adv-box {
@@ -204,6 +233,60 @@
         font-weight: bold;
         &:hover {
             background-color: transparent;
+        }
+    }
+}
+
+.info-comic-section {
+    border-top: 1px solid #d8d8d8;
+    background-color: #f6f6f6;
+    color: #093257;
+    .container {
+        width: 55%;
+        padding: 2rem 0 4rem 0;
+        .talent,
+        .specs {
+            width: 50%;
+            font-size: 10px;
+            h2 {
+                font-size: 15px;
+                font-weight: bold;
+            }
+        }
+        hr {
+            margin: 5px 0;
+            color: #555;
+        }
+    }
+}
+
+.link-info-comic {
+    background-color: #f6f6f6;
+    border-top: 1px solid #d8d8d8;
+    .container {
+        width: 55%;
+        border-right: 1px solid #d8d8d8;
+        .link {
+            border-left: 1px solid #d8d8d8;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 10px;
+            width: calc(100% / 4);
+            color: #888;
+            .title {
+                width: 88%;
+            }
+            .logo {
+                width: 12%;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.8;
+                }
+                img {
+                    width: 100%;
+                    filter: brightness(70%);
+                }
+            }
         }
     }
 }

@@ -34,7 +34,7 @@
                         <li><a @if(Route::currentRouteName()=='news' ) class="active" @endif
                                 href="{{ route('news') }}">NEWS</a></li>
                         <li><a @if(Route::currentRouteName()=='shop' ) class="active" @endif
-                                href="{{ route('shop') }}">SHOP</a></li>
+                                href="{{ route('shop') }}">SHOP <span>▼</span></a></li>
                     </ul>
                 </div>
                 <div class="search">
